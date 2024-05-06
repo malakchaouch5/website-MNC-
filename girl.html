@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>baby | girl</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baby | girl</title>
     <link rel="stylesheet" href="stylegirl.css">
-    <script src="script.js"></script></head>
+    <script src="script.js"></script>
+    <meta http-equiv="refresh" content="3">
+
+</head>
 <body>
     <div class="navbar">
         <div class="navbar_left">MNC</div>
         <div class="navbar_right">
 
         <a href="project.html" > HOME</a>
-        <a href="log.html">SIGN IN</a>
+        <a href="signupp.html">SIGN IN</a>
         <a href="catalogue.html">CATALOGUE</a>
         <a href="LUTUIF.html">LUTYIF</a>
         <a href="about.html">ABOUT</a>
@@ -25,7 +28,7 @@
     
     <div class="container">
 
-        <a href="page_produit_1.html" class="img1 img-hover1">
+        <a href="#" class="img1 img-hover1">
             <div class="hh10">
                 <img src="m14.jpg" >
             
@@ -41,12 +44,22 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('ROBE EN TULLE BRODÉE', '120 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>
             </div>
         </a>
         <br>
-        <a href="page_produit_2.html" class="img1 img-hover2">
+        <a href="#" class="img1 img-hover2">
             <div class="hh1">
                 <img src="m17.jpg" >
             
@@ -63,11 +76,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('BLOUSE À TEXTURE À FLEURS', '75 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_3.html" class="img1 img-hover3">
+        <a href="#" class="img1 img-hover3">
             <div class="hh1">
                 <img src="m6.jpg" >
             
@@ -84,11 +107,22 @@
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                
+              <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('PANTALON STYLE MILITAIRE EN MOLLETON', '59.900 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_4.html" class="img1 img-hover4">
+        <a href="#" class="img1 img-hover4">
             <div class="hh1">
                 <img src="m4.jpg" >
             
@@ -104,14 +138,24 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('ROBE À FLEURS', '99.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
 
 
 
-        <a href="page_produit_5.html" class="img1 img-hover5">
+        <a href="#" class="img1 img-hover5">
             <div class="hh1">
                 <img src="m5.jpg" >
             
@@ -127,12 +171,22 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('T-SHIRT À RAYURES', '29.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
         <br>
-        <a href="page_produit_6.html" class="img1 img-hover6">
+        <a href="#" class="img1 img-hover6">
             <div class="hh1">
                 <img src="m19.jpg" >
             
@@ -147,11 +201,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('BLOUSE À TEXTURE À FLEURS EN DENTELLE', '59 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_7.html" class="img1 img-hover7">
+        <a href="#" class="img1 img-hover7">
             <div class="hh1">
                 <img src="m7.jpg" >
             
@@ -169,11 +233,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9733;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('GILET EN MAILLE À RAYURES', '89.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_8.html" class="img1 img-hover8">
+        <a href="#" class="img1 img-hover8">
             <div class="hh1">
                 <img src="m8.jpg" >
             
@@ -189,11 +263,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('>LEGGING EN MAILLE DOUX AU TOUCHER', '59.900 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_9.html" class="img1 img-hover9">
+        <a href="#" class="img1 img-hover9">
             <div class="hh1">
                 <img src="m9.jpg" >
             
@@ -209,11 +293,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('CIRÉ À CAPUCHE', '139 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_10.html" class="img1 img-hover10">
+        <a href="#" class="img1 img-hover10">
             <div class="hh1">
                 <img src="m10.jpg" >
             
@@ -229,11 +323,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('JUPE EN JEAN À PLIS PLATS', '69.900 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_11.html" class="img1 img-hover11">
+        <a href="#" class="img1 img-hover11">
             <div class="hh1">
                 <img src="m11.jpg" >
             
@@ -249,11 +353,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('VESTE EFFET MOUTON À IMPRIMÉ ANIMAL', '75.900 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_12.html" class="img1 img-hover12">
+        <a href="#" class="img1 img-hover12">
             <div class="hh1">
                 <img src="m12.jpg" >
             
@@ -269,11 +383,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('RSWEAT À CŒURS FLOQUÉS', '39.900 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_13.html" class="img1 img-hover13">
+        <a href="#" class="img1 img-hover13">
             <div class="hh1">
                 <img src="m13.jpg" >
             
@@ -289,11 +413,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('T-SHIRT À RAYURES ÉPAIS', '39.990 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_14.html" class="img1 img-hover14">
+        <a href="#" class="img1 img-hover14">
             <div class="hh1">
                 <img src="m1.jpg" >
             
@@ -309,11 +443,21 @@
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('MANTEAU MATELASSÉ À BOUTONS-PRESSION', '79.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_15.html" class="img1 img-hover15">
+        <a href="#" class="img1 img-hover15">
             <div class="hh1">
                 <img src="m15.jpg" >
             
@@ -329,11 +473,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('HAUT CÔTELÉ AVEC COL ET NŒUD', '55.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_16.html" class="img1 img-hover16">
+        <a href="#" class="img1 img-hover16">
             <div class="hh1">
                 <img src="m16.png" >
             
@@ -349,11 +503,21 @@
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('Jacket jean', '53.330 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_17.html" class="img1 img-hover17">
+        <a href="#" class="img1 img-hover17">
             <div class="hh1">
                 <img src="m2.jpg" >
             
@@ -369,11 +533,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('ROBE BIMATIÈRE EN TULLE BARBIE™ MATTEL', '99.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_18.html" class="img1 img-hover18">
+        <a href="#" class="img1 img-hover18">
             <div class="hh1">
                 <img src="m18.jpg" >
             
@@ -389,11 +563,21 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('OBE À FLEURS AVEC DENTELLE', '84.950 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_19.html" class="img1 img-hover19">
+        <a href="#" class="img1 img-hover19">
             <div class="hh1">
                 <img src="m3.jpg" >
             
@@ -409,11 +593,21 @@
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('SALOPETTE EN DENIM', '99.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
-        <a href="page_produit_20.html" class="img1 img-hover20">
+        <a href="#" class="img1 img-hover20">
             <div class="hh1">
                 <img src="m20.jpg" >
             
@@ -429,8 +623,18 @@
                     <span class="star">&#9733;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <button class="add-to-cart">Ajouter au panier<span class="cart">&#128722;</span></button>
-            
+                <br>
+                <div class="sizes">
+                    <button onclick="selectSize('1M')">1M</button>
+                    <button onclick="selectSize('5M')">5M</button>
+                    <button onclick="selectSize('1A')">1A</button>
+                    <button onclick="selectSize('2A')">2A</button>
+                    <button onclick="selectSize('3A')">3A</button>
+                </div>
+                <br>
+                <div class="add-button" id="addToCartButton">
+                    <button onclick="addToCart('BLOUSE À TEXTURE AVEC POIS BRILLANTS', '55.9 DT', selectedSize)">Add to Cart<span class="cart">&#128722;</span></button>
+                </div>            
             </div>
         </a>
 
