@@ -93,11 +93,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="navbar_right">
 
             <a href="project.html" > HOME</a>
-            <a href="log.html">SIGN IN</a>
+            <a href="log.php">SIGN IN</a>
             <a href="catalogue.html"><u>CATALOGUE</u></a>
             <a href="LUTUIF.html">LUTYIF</a>
             <a href="about.html">ABOUT</a>
-            <a href="contactus.html">CONTACT</a>
+            <a href="contactus.php">CONTACT</a>
             <a href="panier.html"><span class="cart">&#128722;</span><span class="cart-count">0</span></a>       </div>
         </div>
     </div>
