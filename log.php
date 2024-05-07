@@ -1,3 +1,28 @@
+<?php 
+include "db.php";
+
+// Traitement du formulaire de connexion
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    // Vérification des informations de connexion dans la base de données
+    $stmt = $conn->prepare("SELECT * FROM inserer WHERE username = :username");
+    $stmt->bindParam(":username", $username);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user && $password === $user['password']) {
+        echo "Redirection en cours...";
+        header("Location: project.html");
+        exit;
+    } else {
+        // Authentification échouée, affiche un message d'erreur
+        echo '<script type="text/javascript">alert("Invalid password or username. Please enter correct login information.")</script>';
+    }
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +31,6 @@
     <title>Formulaire</title>
     <link rel="stylesheet" type="text/css" href="log.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></head>
-    <script src="script.js"></script>
-    <meta http-equiv="refresh" content="3">
 
 
 <body>
@@ -28,22 +51,18 @@
         <div class="item">
       
      <div class="one">
-        <form class="form">
+        <form class="form" method ="POST">
             <h2>Log in</h2>
-                
-
-            
+        
             <img src="logo.png" width="110%" >
             <br>
             <div class="ha">
-            <input type="text" placeholder="Username">
-            
-            <i class='bx bxs-user' ></i>
+            <input type="text" placeholder="Username" name="username">            <i class='bx bxs-user' ></i>
         </div>
                     
         <br>
             <div class="ha">
-            <input type="password" id="password" placeholder="Password">
+            <input type="password" id="password" placeholder="Password" name="password">
             <i class='bx bxs-lock-alt' ></i>
             
               </div>
@@ -53,7 +72,7 @@
             <br>
             <input type="submit" value="Login">
             <input  type="reset" value="reset">
-            <p>Don't have an account?<a href="signupp.html">Sign up</a></p>
+            <p>Don't have an account?<a href="signupp.php">Sign up</a></p>
             
             <p id="para">login with social plateform</p>
             <div class="social1">
@@ -68,9 +87,7 @@
         </form>
 </div>
 <div class="two" >
-    <img src="l3.png" width="100%" height="100%">
-    
-      
+    <img src="l3.png" width="100%" height="100%">     
 </div>
 </div>
     
