@@ -1,16 +1,5 @@
 <?php
-// Connexion à la base de données
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "client";
-
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "La connexion a échoué : " . $e->getMessage();
-}
+include "db.php";
 
 // Traitement du formulaire d'inscription
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,9 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if (empty($email)) {
         $errors[] = "L'adresse e-mail est obligatoire.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "L'adresse e-mail n'est pas valide.";
-    }
+    } 
     if (empty($phone)) {
         $errors[] = "Le numéro de téléphone est obligatoire.";
     }
@@ -45,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Les mots de passe ne correspondent pas.";
     }
 
-    if (empty($errors)) {
+    if (empty($errors)) { // Si aucune erreur n'a été détectée
       // Vérification que l'email n'existe pas déjà dans la base de données
       $emailExists = false;
       $stmt = $conn->prepare("SELECT COUNT(*) AS count FROM inserer WHERE email = :email");
@@ -80,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           $stmt->bindParam(":gender", $gender);
           $stmt->bindParam(":interests", $interests);
           if ($stmt->execute()) {
-              echo "Enregistrement réussi !";
+            echo '<script type="text/javascript">alert("Enregistrement réussi !")</script>';
           } else {
-              echo "Erreur lors de l'enregistrement.";
+            echo '<script type="text/javascript">alert("Erreur lors de l enregistrement!")</script>';
           }
         }
       } 
