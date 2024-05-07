@@ -6,28 +6,24 @@
     <title>MNC</title>
     <link rel="stylesheet" href="project.css">
     <script src="script.js"></script>
-    <meta http-equiv="refresh" content="3">
-
-
 </head>
 <body>
     <div class="navbar">
         <div class="navbar_left">MNC</div>
         <div class="navbar_right">
-
             <a href="project.html" > <u>HOME</u></a>
             <a href="log.php">SIGN IN</a>
             <a href="catalogue.html">CATALOGUE</a>
             <a href="letuf.html">LUTYIF</a>
             <a href="about.html">ABOUT</a>
             <a href="contactus.html">CONTACT</a>
-            <a href="panier.html"><span class="cart">&#128722;</span><span class="cart-count">0</span></a>       </div>
-       </div>
+            <a href="panier.html"><span class="cart">&#128722;</span><span class="cart-count">0</span></a>
+        </div>
     </div>
     
     <div class="vd" >
-        <video  width="1520px" autoplay muted>
-            <source src="vd.mp4" >
+        <video id="maVideo" width="1520px" autoplay muted>
+            <source src="vd.mp4">
         </video>
     </div>
     <br><br><br>
@@ -49,7 +45,7 @@
      </div>
     
      <div class="au">
-     <audio  controls autoplay >
+     <audio controls autoplay>
         <source src="0224.MP3">
      </audio> 
     </div>
@@ -62,9 +58,19 @@
     
 </div> 
 
-<p>Pour nous contacter, veuillez envoyer un e-mail à <a href="mailto:MNC@gmail.com">MNC@gmail.com</a> ou bien vous-pouvez taper <a href="contactus.html">içi</a>.</p>
+<p>Pour nous contacter, veuillez envoyer un e-mail à <a href="mailto:MNC@gmail.com">MNC@gmail.com</a> ou bien vous-pouvez taper <a href="contactus.html">ici</a>.</p>
     
 
-  
+<script>
+    const video = document.getElementById('maVideo');
+    function replayVideo() {
+        video.currentTime = 0; 
+        video.play(); 
+    }
+    video.addEventListener('ended', function() {
+        setTimeout(replayVideo, 8000); 
+    });
+    video.play();
+</script>
 </body>
 </html>
