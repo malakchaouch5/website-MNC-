@@ -11,16 +11,16 @@
     <div class="navbar">
         <div class="navbar_left">MNC</div>
         <div class="navbar_right">
-            <a href="project.html">HOME</a>
-            <a href="log.php">SIGN IN</a>
-            <a href="catalogue.html">CATALOGUE</a>
-            <a href="LUTUIF.html">LUTYIF</a>
-            <a href="about.html">ABOUT</a>
-            <a href="contactus.php">CONTACT</a>
-            <a href="panier.html"><span class="cart">&#128722;</span><span class="cart-count">0</span></a>       </div>
 
-        </div>
+        <a href="project.html" > HOME</a>
+        <a href="log.php">SIGN IN</a>
+        <a href="catalogue.html">CATALOGUE</a>
+        <a href="LUTUIF.html">LUTYIF</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contactus.html">CONTACT</a>
+        <a href="panier.html"><span class="cart">&#128722;</span><span class="cart-count">0</span></a>       </div>
     </div>
+    </div> 
     <div class="item">
         <div class="one">
             <table border="1px" width="470px">
@@ -59,20 +59,19 @@
     </div>
     
     <script>
-        var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-let cartCount = 0;
-
-function displayCart() {
+    var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartCount = 0;
+    // Fonction pour afficher les articles du panier
+   function displayCart() {
     var cartTable = document.getElementById("cartItems");
     var itemCount = document.getElementById("itemCount");
     var totalPrice = document.getElementById("totalPrice");
     
-    cartTable.innerHTML = "";
-    
+    cartTable.innerHTML = "";    // Réinitialisation du contenu du tableau du panier
     var total = 0;
     
-    cartItems.forEach(function(item) {
-        var row = cartTable.insertRow(-1);
+    cartItems.forEach(function(item) {    // Parcours de chaque article dans le panier
+        var row = cartTable.insertRow(-1);   // Création d'une nouvelle ligne dans le tableau pour chaque article
         var cell1 = row.insertCell(0);
         var cell2 = row.insertCell(1); 
         var cell3 = row.insertCell(2);
@@ -83,7 +82,7 @@ function displayCart() {
         cell1.innerHTML = item.name;
         cell2.innerHTML = item.size; 
         cell3.innerHTML = item.price;
-        
+        //quantity
         var quantityInput = document.createElement('input');
         quantityInput.type = 'number';
         quantityInput.min = '1'; 
@@ -93,11 +92,11 @@ function displayCart() {
             updateQuantity(item, parseInt(quantityInput.value));
         });
         cell4.appendChild(quantityInput);
-
+       //total
         var itemTotal = parseFloat(item.price) * item.quantity;
         total += itemTotal;
         cell5.innerHTML = itemTotal;
-        
+        //action
         var deleteIcon = document.createElement('i');
         deleteIcon.className = 'delete-icon bx bx-x';
         deleteIcon.addEventListener('click', function() {
@@ -147,20 +146,22 @@ function checkout() {
     var name = prompt("Please enter your name:");
     var phoneNumber = prompt("Please enter your phone number:");
     var address = prompt("Please enter your address:");
+    var card = prompt("Please enter your card number:");
 
-    var total = 0;
+
+    /*var total = 0;
     cartItems.forEach(function(item) {
         total += parseFloat(item.price) * item.quantity;
     });
     
-    var discountedTotal = calculateTotal(total);
+    var discountedTotal = calculateTotal(total);*/
     
     cartItems = [];
     localStorage.removeItem('cart');
     displayCart();
     
-    var totalPrice = document.getElementById("totalPrice");
-    totalPrice.textContent = discountedTotal.toFixed(2) + " dt";
+    /*var totalPrice = document.getElementById("totalPrice");
+    totalPrice.textContent = discountedTotal.toFixed(2) + " dt";*/
     alert("Checkout completed. Thank you!");
 }
 
